@@ -1,0 +1,73 @@
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0D0630;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#img {
+    display: flex;
+    align-items: center;
+}
+
+#img > a > img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+#Product {
+    margin-left: auto;
+}
+
+#Product, #About, #Contact {
+    margin-right: 40px;
+}
+
+nav h3 {
+    margin: 0;
+}
+
+.nav-item {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.nav-item.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.nav-item:hover {
+    color: #00FF88;
+    text-decoration: none;
+}
+
+#Sign a {
+    background-color: #4ce25b;
+    border: none;
+    padding: 18px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#Sign a:hover {
+    background-color: #35D946;
+    transform: translateY(-1px);
+}
+
+#Sign a {
+    color: #0D0630;
+    text-decoration: none;
+}
