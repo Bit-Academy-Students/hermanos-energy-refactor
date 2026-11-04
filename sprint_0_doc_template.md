@@ -57,7 +57,7 @@
 
 ### Sprints
 - Duur per sprint: **2 weken**
-- Startdatum Sprint 1: `<DD MMM YYYY>`
+- Startdatum Sprint 1: `3-11-2026`
 
 ### Meetings
 
