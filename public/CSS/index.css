@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    justify-self: center;
+    max-width: 1200px;
+}
+
+section {
+    min-height: 551px;
+}
+
+#section1 {
+    background-image: url('../src/Home-page-background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

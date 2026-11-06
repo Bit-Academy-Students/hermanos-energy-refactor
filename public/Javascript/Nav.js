@@ -1,30 +1,49 @@
-// Get the current filename from the URL (defaults to index.html if empty)
+// Haal de huidige paginanaam op
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
 const navbar = `
 <div id="img">
     <a href="index.html">
-        <img src="scr/Hermanos-Logo.png" alt="Hermanos Energy logo">
+        <img src="src/Hermanos-Logo.png" alt="Hermanos Energy logo">
     </a>
 </div>
 
-<div id="Product">
-    <h3><a class="nav-item ${currentPage === 'Product.html' ? 'active' : ''}" href="Product.html">Product</a></h3>
-</div>
+<div></div>
 
-<div id="About">
-    <h3><a class="nav-item ${currentPage === 'About.html' ? 'active' : ''}" href="About.html">About us</a></h3>
-</div>
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
 
-<div id="Contact">
-    <h3><a class="nav-item ${currentPage === 'Contact.html' ? 'active' : ''}" href="Contact.html">Contact us</a></h3>
-</div>
+<div class="nav-links" id="navLinks">
+    <div id="Product">
+        <h3><a class="nav-item ${currentPage === 'Product.html' ? 'active' : ''}" href="Product.html">Product</a></h3>
+    </div>
 
-<div id="Sign">
-    <a href="https://www.hermanos.energy/" target="_blank" rel="noopener noreferrer">Sign in</a>
+    <div id="About">
+        <h3><a class="nav-item ${currentPage === 'About.html' ? 'active' : ''}" href="About.html">About us</a></h3>
+    </div>
+
+    <div id="Contact">
+        <h3><a class="nav-item ${currentPage === 'Contact.html' ? 'active' : ''}" href="Contact.html">Contact us</a></h3>
+    </div>
+
+    <div id="Sign">
+        <a href="https://www.hermanos.energy/" target="_blank" rel="noopener noreferrer">Sign in</a>
+    </div>
 </div>
 `;
 
 const Nav = document.createElement('nav');
 Nav.innerHTML = navbar;
 document.body.appendChild(Nav);
+
+// Toggle logica voor de hamburger
+const toggleBtn = Nav.querySelector('#navToggle');
+const navLinks = Nav.querySelector('#navLinks');
+
+toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('active');
+    navLinks.classList.toggle('open');
+});
