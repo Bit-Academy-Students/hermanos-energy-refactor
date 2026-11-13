@@ -12,7 +12,6 @@
 
 | Rol                       | Naam                 | E-mail                         |
 | ------------------------- | -------------------- | ------------------------------ |
-| **Product Owner (klant)** | `Hermanos Energy` | `Jan.Ruijtenberg@hotmail.com`              |
 | **Scrum Coach**           | `Ties Noordhuis`             | `ties@bit-academy.nl`        |
 | **Developer 1**           | `Jarno Walters`             | `j.walters@student.talland.nl`    |
 | **Developer 2**           | `Hendrik Ket`             | `h.ket@student.talland.nl`    |
@@ -90,7 +89,6 @@
 **Communicatiekanalen**
 - **Team:** Discord
 - **Code & planning:** GitHub Projects (https://github.com/Bit-Academy-Students/hermanos-energy-refactor)
-- **Klantcontact:** e-mail (`Jan.Ruijtenberg@hotmail.com`)
 
 ---
 
