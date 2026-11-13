@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
     scrollbar-color: #0b4f4a #5f9e98;
     scrollbar-width: thin;
+    margin: 0;
 }
 
 main {
@@ -10,16 +11,19 @@ main {
     flex-direction: column;
     justify-self: center;
     align-items: center;
+    width: 100%;
 }
 
 header {
-    filter: brightness(1.19);
     background-image: url('../src/Home-page-background.png');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
-    width: 100vw;
-    height: 478px;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 478px;
+    height: auto;
+    padding-bottom: 40px;
+    box-sizing: border-box;
     color: white;
 }
 
@@ -45,17 +49,21 @@ header {
 .header-contend {
     display: flex;
     margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
-    height: 240px;
+    min-height: 240px;
+    height: auto;
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    justify-self: center;
     flex-direction: column;
     max-width: 680px;
+    padding: 0 20px;
     column-gap: 20px;
+    box-sizing: border-box;
 }
 
 .header-contend>h1 {
@@ -86,17 +94,26 @@ section {
 #section1 {
     display: flex;
     align-items: center;
-    align-content: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     box-sizing: border-box;
     position: relative;
-    width: 1496px;
-    height: 551.638px;
+    width: 100%;
+    max-width: 1496px;
+    height: auto;
     padding: 100px;
-    gap: 0px;
-    overflow: hidden;
+    gap: 40px;
     background-color: rgb(255, 255, 255);
     -webkit-font-smoothing: antialiased;
+}
+
+#section1 .left-Container h1 {
+    font-size: 36px;
+    font-family: Rajdhani, sans-serif;
+    font-weight: 600;
+    line-height: 30.6px;
+    text-align: start;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
 }
 
 #section1>.left-Container>p {
@@ -111,28 +128,37 @@ section {
     text-decoration-skip-ink: auto;
 }
 
-#section1>.left-Container>h2 {
-    color: rgba(25, 21, 78);
-    font-family: Rajdhani, sans-serif;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: start;
-    text-decoration-line: none;
-    text-decoration-skip-ink: auto;
-    text-decoration-style: solid;
-    text-decoration-thickness: auto;
+#section1>.left-Container {
+    max-width: 600px;
 }
 
 .Home-page-img-1 {
-  max-width: 552px;
-  height: auto;
-  border-radius: 20px;
+    width: 552px;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 20px;
 }
 
-@media (max-width: 1200px) {}
+#section2 {
+    background-color: #F6F4FF;
+}
 
+@media (max-width: 1200px) {
+    #section1 {
+        flex-direction: column;
+        padding: 60px 40px;
+    }
+}
 
 @media (max-width: 810px) {
+    #section1 {
+        padding: 40px 20px;
+    }
+
+    .header-contend {
+        margin-top: 50px;
+    }
 
     .header-contend>h1 {
         font-size: 40px;
@@ -140,5 +166,6 @@ section {
 
     .header-contend>p {
         font-size: 18px;
+        line-height: 26px;
     }
 }
